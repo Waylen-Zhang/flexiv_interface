@@ -18,10 +18,9 @@ A lightweight Python interface and examples for Flexiv Rizon series robots. This
   * numpy, scipy, matplotlib
   * pinocchio, example-robot-data (only for admittance simulation)
   * flexivrdk (Flexiv official SDK — install per vendor instructions)
-  * Optional: casadi (if using [casadi\_ik.py](vscode-file://vscode-app/usr/share/code/resources/app/out/vs/code/electron-browser/workbench/workbench.html))
+  * Optional: casadi (if using [casadi\_ik.py](vscode-file://vscode-app/usr/share/code/resources/app/out/vs/code/electron-browser/workbench/workbench.html)), redis, ros2 (if using visualization)
 
 Note: [flexivrdk](vscode-file://vscode-app/usr/share/code/resources/app/out/vs/code/electron-browser/workbench/workbench.html) is vendor-provided and may require separate installation (wheel or vendor SDK). Admittance simulation requires [pinocchio](vscode-file://vscode-app/usr/share/code/resources/app/out/vs/code/electron-browser/workbench/workbench.html) and [example-robot-data](vscode-file://vscode-app/usr/share/code/resources/app/out/vs/code/electron-browser/workbench/workbench.html) which are optional for hardware usage.
-
 
 ## Conda Environment (recommended)
 
@@ -30,33 +29,24 @@ Create and activate a conda environment for this project:
 ```
 
 # create env with specific python version
-conda create -n flexiv python=3.8 -y
+conda create -n flexiv python=3.10 -y
 conda activate flexiv
+pip install flexivrdk==1.7.0 pin==2.6.20 pin-pink numpy scipy pyrobotiqgripper
+pip install -e .
 
-# core numerical and plotting packages
-conda install -c conda-forge numpy scipy matplotlib -y
+# if you want to run admittance control simulation
+pip install example_robot_data==4.3.0
 
-# optional (for admittance / pinocchio-based simulation)
-conda install -c conda-forge pinocchio example-robot-data -y
-
-# install casadi if you need casadi-based IK
-conda install -c conda-forge casadi -y
-pip install --upgrade pip
-pip install flexivrdk
+#if you want to debug with visualization, install ros2 humble, and follow the redis install instruction
 ```
-
 
 ## Quick Start — Examples
 
-1. Edit the example scripts to set your robot serial number:
+Run a simple read/command example (real robot required for hardware calls):
 
-   * [test\_interface.py](vscode-file://vscode-app/usr/share/code/resources/app/out/vs/code/electron-browser/workbench/workbench.html)
-   * [press\_desk.py](vscode-file://vscode-app/usr/share/code/resources/app/out/vs/code/electron-browser/workbench/workbench.html)
-2. Run a simple read/command example (real robot required for hardware calls):
-
-   ```
-   python example_py/test_interface.py
-   ```
+```
+python test/test_teml.py
+```
 
 ## Files & Folders (overview)
 
