@@ -45,13 +45,13 @@ pip install example_robot_data==4.3.0
 Run a simple read/command example (real robot required for hardware calls):
 
 ```
-python test/test_teml.py
+python test/test_toml.py
 ```
 
 ## Files & Folders (overview)
 
 * [flexiv\_interface.py](vscode-file://vscode-app/usr/share/code/resources/app/out/vs/code/electron-browser/workbench/workbench.html) : Flexiv SDK wrapper. Methods include:
-  * [get\_joint\_position()](vscode-file://vscode-app/usr/share/code/resources/app/out/vs/code/electron-browser/workbench/workbench.html), [get\_tcp\_pose()](vscode-file://vscode-app/usr/share/code/resources/app/out/vs/code/electron-browser/workbench/workbench.html), [get\_external\_wrench\_world()](vscode-file://vscode-app/usr/share/code/resources/app/out/vs/code/electron-browser/workbench/workbench.html), etc.
+  * [get\_joint\_position()](vscode-file://vscode-app/usr/share/code/resources/app/out/vs/code/electron-browser/workbench/workbench.html), [get\_tcp\_pose()](vscode-file://vscode-app/usr/share/cde/resources/app/out/vs/code/electron-browser/workbench/workbench.html), [get\_external\_wrench\_world()](vscode-file://vscode-app/usr/share/code/resources/app/out/vs/code/electron-browser/workbench/workbench.html), etc.
   * [start\_joint\_position\_control()](vscode-file://vscode-app/usr/share/code/resources/app/out/vs/code/electron-browser/workbench/workbench.html), [start\_cartesian\_control()](vscode-file://vscode-app/usr/share/code/resources/app/out/vs/code/electron-browser/workbench/workbench.html), [set\_joint\_target\_positions()](vscode-file://vscode-app/usr/share/code/resources/app/out/vs/code/electron-browser/workbench/workbench.html), [set\_cartesian\_target\_pose()](vscode-file://vscode-app/usr/share/code/resources/app/out/vs/code/electron-browser/workbench/workbench.html).
   * [zero\_ft\_sensor()](vscode-file://vscode-app/usr/share/code/resources/app/out/vs/code/electron-browser/workbench/workbench.html), [move\_to\_home()](vscode-file://vscode-app/usr/share/code/resources/app/out/vs/code/electron-browser/workbench/workbench.html) utility methods.
 * [admittance](vscode-file://vscode-app/usr/share/code/resources/app/out/vs/code/electron-browser/workbench/workbench.html) :
