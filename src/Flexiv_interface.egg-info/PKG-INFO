@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: Flexiv_interface
+Version: 0.1.0
+Summary: flexiv interface
+Author: Waylen Zhang
+Requires-Dist: numpy

@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "Flexiv_interface"
+version = "0.1.0"
+description = "flexiv interface"
+authors = [{name="Waylen Zhang"}]
+dependencies = [
+    "numpy",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
